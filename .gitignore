@@ -1,0 +1,135 @@
+# 数据库（很大，不要提交）
+video_index.db
+video_index_fixed.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# FAISS索引（很大）
+faiss_index.bin
+faiss_meta.pkl
+
+# 缩略图（很大，生成中）
+thumbnails/
+
+# 模型文件（很大，可重新下载）
+models/*.bin
+models/*.pt
+models/*.onnx
+# 但保留小的配置文件
+!models/config.json
+!models/tokenizer.json
+!models/vocabulary.txt
+
+# FFmpeg二进制
+bin/ffmpeg.exe
+
+# 日志和临时文件
+process_log.txt
+处理完成.txt
+*.log
+*.tmp
+*.bak
+_audit_*.py
+_versions.txt
+
+# 历史bug截图
+bug*.png
+
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Streamlit
+.streamlit/secrets.toml
+
+# 操作系统
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 本地发布管理登录资料和独立业务数据库，禁止提交
+*.private.json
+operations.db
+*.dpapi
+*.enc
+startup_render/runtime/
+
+# 开发快照安全排除；生产配置不进入版本库。
+.venv*/
+node_modules/
+**/deps/
+**/runtime/
+**/results/
+**/outputs/
+**/cache/
+**/.ui-*/
+**/tmp*/
+*.db
+*.sqlite
+*.sqlite3
+*.db-*
+*.private.json
+*.bak
+*.mp4
+*.mov
+*.ts
+*.mkv
+*.wav
+*.faiss
+*.pkl
+*.bin
+*.pt
+*.onnx
+*.exe
+.env
+.env.*
+!.env.example
+**/secrets.toml
+config.json
+jianying_auto/jianying_source_folders.json
+benchmark/experiments/dino_july_web/search_config.json
+development_link/verification/
+development_link/snapshot/
+development_link/XunZhen.git/
+
+# GitHub 代码备份：运行数据、素材、凭据和本机配置保持本地。
+**/runtime/
+**/reports/
+**/backups/
+**/verification/
+**/__pycache__/
+*.log
+*.pyc
+*.pyd
+*.dpapi
+*.enc
+*.pem
+*.key
+*.zip
+*.7z
+*.db.*
+*.sqlite*
+*.json
+!*.example.json
+!SOURCE_MANIFEST.json
+!/auto_remake/alignment_rules.json
+!/auto_remake/localization_rules.json
+!/auto_remake/multimodal_rules.json
+!/auto_remake/source_switching_rules.json
+!/content_pool/products.json
+!/content_pool/rules.json
+!/jianying_auto/combo_skeleton.json
+!/server_maintenance/approved_cleanup.json
+!/startup_autopilot/default_policy.json
+!/startup_pipeline/export_config.json
+!/startup_render/jianying59_export_profile.json

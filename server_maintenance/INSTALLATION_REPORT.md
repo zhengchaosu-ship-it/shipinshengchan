@@ -1,0 +1,29 @@
+# 2026-10-09 服务器维护与共享协调验收
+
+XUNZHEN_SERVER_AUTONOMOUS_MAINTENANCE_V2_READY。指维护机制已部署，生产状态另行报告为DEGRADED。
+
+SERVER_ENGINEER=当前服务器电脑Codex；EXECUTOR_2060_ENGINEER=2060电脑负责AUTOPILOT_UNATTENDED_LEVEL1的Codex聊天。正式聊天绑定等待用户在2060端加入同一策略；本轮没有发任何聊天通知，也没有把“发布计划交接流程”当成执行节点工程师。
+
+共享状态：`runtime/maintenance_watchdog/coordination/policy.json`、`server_state.json`及`signals.jsonl`。原LAN API认证只读接口`/maintenance/coordination`已实测HTTP200，沿用原认证及客户端限制。存储、Planner、API、DB、Backup、Account Sync、Queue、Reconciliation归Server；Worker、Session、Jianying、Export、Verify、Yixiaoer、Heavy Slot、Journal、REJOIN归Executor。每个incident包含固定Owner、归因及要求的证据字段；Peer异常不允许触发越权恢复。
+
+已安装SYSTEM每分钟本地守护、每30分钟完整快照和Codex每30分钟心跳。两项本地任务成功返回0；Codex不可用不会成为生产阻断条件。原Planner/API任务保留正式身份，采用3次、间隔1分钟有限重试及IgnoreNew。任务设置与源代码基线保存在维护runtime。
+
+已恢复Planner；修复服务器API旧入口退出后遗留子进程的问题，新API入口使用Windows Job收口所拥有的Server子树。API正式任务为Running、单实例且PID已变更；协调接口200，2060自然保持ONLINE/READY。旧Planner入口仍正常运行已验证的修复版本；新Job入口随下一次正式启动加载，不为测试强制重启当前Planner。
+
+最终快照：D盘约149.94GiB可用，Storage NORMAL；目录增长处于NORMAL。Planner/API/Account Sync/8502在线；DB只读预检通过；Backup COMPLETE；Session ready；Heavy Slot IDLE；无待Render/Publish的可运行队列，SCHEDULED_QUEUED为27。保留1个风险暂停账号、4个隔离Job，因此ProductionReadiness=DEGRADED。对账逾期数为0；last_reconcile_at是最后状态改变事件时间，不冒充每轮查询完成时间。更及时的数据以latest.json/latest.md为准。
+
+受保护DB和索引stat与部署前一致，用户授权表和Account Runtime一致；Allocation/MediaJob/ProviderJob数量未增加。生产仍在正常只读对账，部分业务状态/检查时间自然更新；不将这些变化宣称为账本逐字节未变。持久账本Duplicate检测为0；外部Provider调用覆盖无法由本地账本独立证明。
+
+验证：现有50项隔离业务回归与维护22项测试通过，其中两项验证真实隔离Python子进程在Job关闭或父入口强制退出后终止。回滚副本另通过50项隔离回归；未实际停止生产执行回滚演练。维护脚本语法检查通过。全部测试不执行真实Publish/Export，不操作2060 GUI。
+
+本轮未删除、归档生产文件，回收空间为0；其它Server聊天的磁盘恢复单独记录，不计为本轮动作。没有手动Account Ack、生产Schema Migration或Windows重启。自主动作和根因证据永久记录于repairs.jsonl；源码局部撤销副本、哈希校验和一键安全回滚入口已保存。
+
+AUTO_FIX_PERMISSION_LEVEL=HIGH
+
+DESTRUCTIVE_UNKNOWN_DATA_DELETE=FORBIDDEN
+
+REAL_TEST_PUBLISH=FORBIDDEN
+
+MANUAL_ACCOUNT_ACK=FORBIDDEN
+
+WINDOWS_REBOOT=FORBIDDEN

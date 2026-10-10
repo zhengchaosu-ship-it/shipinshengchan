@@ -1,0 +1,13 @@
+# 仅用于独立 CUDA 环境；不要安装到生产 CPU 环境。
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+numpy==2.5.3
+pillow==12.3.0
+opencv-python==5.0.0.93
+streamlit==1.64.0
+openai-whisper==20250625
+faster-whisper==1.2.1
+rapidocr-onnxruntime==1.2.3
+opencc-python-reimplemented==0.1.7
+faiss-cpu==1.15.1

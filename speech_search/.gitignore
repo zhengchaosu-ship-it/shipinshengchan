@@ -1,0 +1,7 @@
+deps/
+models/bge-small-zh-v1.5/
+*.sqlite
+*.sqlite-journal
+semantic_pilot/*.faiss
+semantic_pilot/*.npy
+__pycache__/

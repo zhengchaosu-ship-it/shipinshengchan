@@ -1,0 +1,16 @@
+{
+  "lib1": "",
+  "green_dir": "",
+  "pull_dir": "",
+  "shouwei_dir": "",
+  "lib2": "",
+  "bg_dir": "",
+  "sticker_key_value": "",
+  "sticker_combination": false,
+  "effect_filter_kv": "",
+  "sweep_dir": "",
+  "particle_dir": "",
+  "live_dir": "",
+  "whisper_model": "../models",
+  "jianying_draft_dir": ""
+}

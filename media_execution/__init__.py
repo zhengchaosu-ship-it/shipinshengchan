@@ -1,0 +1,4 @@
+"""单工作站媒体执行协议；不会在 import 时迁移、领取或启动生产任务。"""
+
+EXECUTION_SLOT = 1
+WORKSTATION_MEDIA_EXECUTION_LOCK = 'Global\\WORKSTATION_MEDIA_EXECUTION_LOCK'

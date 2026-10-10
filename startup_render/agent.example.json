@@ -1,0 +1,21 @@
+{
+  "server_url": "http://192.168.1.126:8766",
+  "worker_id": "2060S-192.168.1.89",
+  "stop_after_one": true,
+  "powershell": "C:/Users/sdaffwS/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+  "version_check": "D:/JianyingRenderWorker/Scripts/CHECK_JIANYING59_VERSION.ps1",
+  "jianying_launcher_name": "剪映5.9RENDER WORKER",
+  "jianying_launcher": "D:/JianyingRenderWorker/Scripts/START_JIANYING59_WORKER.ps1",
+  "jianying_launcher_sha256": "D47975370FCE7EB3B75157B98AC51F860E7B1C7B78F6A7444078531AEAFA8083",
+  "state_root": "D:/Projects/XunZhen/startup_render/runtime/agent",
+  "draft_root": "D:/JianyingPro Drafts",
+  "jianying_settings": "C:/Users/sdaffwS/AppData/Local/JianyingPro/User Data/Config/globalSetting",
+  "jianying_index": "C:/Users/sdaffwS/AppData/Local/JianyingPro/User Data/Projects/com.lveditor.draft/root_meta_info.json",
+  "export_root": "D:/JianyingRenderWorker/Exports/startup",
+  "jianying_exe": "D:/JianyingRenderWorker/JianyingPro/5.9.0.11632/JianyingPro.exe",
+  "jianying_sha256": "ba941a875e7e4c4bbd3200733c10836c21e07df726195f7102b3107874ef07d9",
+  "ffprobe": "D:/JianyingRenderWorker/Tools/FFmpeg/ffmpeg-9.0.2-essentials_build/bin/ffprobe.exe",
+  "poll_seconds": 10,
+  "render_timeout": 1800,
+  "max_package_bytes": 21474836480
+}

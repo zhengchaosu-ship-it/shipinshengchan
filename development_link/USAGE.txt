@@ -1,0 +1,38 @@
+服务器 -> 2060S 独立开发源码链路
+
+真实运行源码：D:\video_search_tool
+新版入口：benchmark/experiments/dino_july_web/app.py，Streamlit 8502。
+生产根目录原本没有 Git 历史。本链路创建的是受控源码快照的新 Git 历史，
+不声称恢复了既有历史，不修改业务文件、不重启线上服务。
+
+服务器端：
+1. powershell -File D:\video_search_tool\development_link\refresh-source.ps1
+   更新安全快照与只读 Git 仓库；疑似真实凭据常量会拒绝同步。
+2. powershell -File D:\video_search_tool\development_link\start-source-channel.ps1
+   仅在8765尚未监听时启动。独立系统任务XunZhen-Source-Git-2060S，
+   当前用户登录后自动启动，当前命令会立即启动；不存密码、不使用SYSTEM。
+   不依赖Codex会话，服务器注销/重启后需该用户重新登录。
+   防火墙只允许192.168.1.89，应用层也限定来源，不暴露生产目录。
+   HTTP仅用于可信局域网，不提供加密传输，不可映射到公网。
+
+2060S：D:\Projects\XunZhen，开发分支development/2060s。
+origin=http://192.168.1.126:8765/XunZhen.git
+更新：powershell -File development_link\update-target.ps1
+此脚本遇到未保存修改或分支分叉立即停止，不覆盖开发成果。
+开发者提交时设置自己的本地Git用户名/邮箱。源通道只读，不自动部署到服务器。
+
+开发Python：.venv-dev\Scripts\python.exe，独立于既有剪映Worker虚拟环境。
+依赖安装：.venv-dev\Scripts\python.exe -m pip install -r development_link\requirements-dev.txt -c requirements.txt
+仅安装自动发布开发/mock UI回归依赖，不下载模型或复制生产索引。
+既有回归命令：.venv-dev\Scripts\python.exe -X utf8 -m startup_pipeline.verify
+完整开发校验：powershell -File development_link\verify-target.ps1
+首次校验会用原迁移初始化development_link/verification/operations.db，
+不创建真实员工、账号或发布任务，禁止迁移该隔离目录以外的数据库。
+没有package.json；本项目没有前端build/lint/typecheck脚本，不编造成功。
+Windows桌面通道使用COM/UIA+键盘辅助，不需要Playwright/浏览器驱动。
+
+config.json、xiaovcat_adapter/config.json、剪映素材配置和搜索配置由安全模板生成，
+仅生成缺失文件，不覆盖用户现有配置，全部被Git忽略。
+真实发布开关始终false，不运行v04_submit_once，不消费发布队列。
+账号、分组绑定、会话、生产数据库、日志、截图、视频和凭据均不随源码复制。
+全量素材检索仍使用服务器；任务机只是开发环境，不是生产发布验收环境。

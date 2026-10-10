@@ -1,0 +1,15 @@
+{
+  "video_folder": "",
+  "material_folder": "",
+  "query_device": "cpu",
+  "paths": {
+    "database": "development_link/verification/video_index_fixed.db",
+    "legacy_database": "development_link/verification/video_index.db",
+    "faiss_index": "development_link/verification/faiss_index.bin",
+    "faiss_meta": "development_link/verification/faiss_meta.pkl",
+    "models_dir": "models",
+    "ffmpeg_executable": "D:\\小V猫\\resources\\app\\ffmpeg.exe",
+    "python_executable": ".venv-dev/Scripts/python.exe"
+  },
+  "sample_videos": {}
+}

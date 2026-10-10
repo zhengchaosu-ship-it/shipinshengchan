@@ -1,0 +1,36 @@
+{
+  "bind": "192.168.1.126",
+  "event_only": true,
+  "port": 8766,
+  "allowed_clients": [
+    "192.168.1.89",
+    "192.168.1.126",
+    "127.0.0.1"
+  ],
+  "state_root": "D:/video_search_tool/startup_render/runtime/batch10_20261004_1630/server",
+  "batch_root": "D:/video_search_tool/jianying_auto/runtime/batches",
+  "operations_db": "D:/video_search_tool/operations.db",
+  "result_root": "D:/video_search_tool/outputs/lan_render",
+  "allowed_draft_roots": [
+    "C:/Users/Administrator/AppData/Local/JianyingPro/User Data/Projects/com.lveditor.draft"
+  ],
+  "poll_seconds": 10,
+  "max_package_bytes": 21474836480,
+  "render_api_host": "192.168.1.126",
+  "render_api_port": 8766,
+  "worker_token_file": "D:\\video_search_tool\\startup_render\\runtime\\lan_resident_v1\\secrets\\worker_token.dpapi",
+  "startup_assets_root": "E:/备份/起号手法",
+  "startup_assets_unc": "\\\\PC-20260617GEOP\\StartupAssets",
+  "task_files_unc": "\\\\PC-20260617GEOP\\StartupTaskFiles",
+  "render_output_unc": "\\\\PC-20260617GEOP\\RenderOutput",
+  "render_output_root": "D:/video_search_tool/outputs/lan_render",
+  "heartbeat_timeout": 90,
+  "lease_seconds": 120,
+  "worker_ids": [
+    "WORKER-2060S-01"
+  ],
+  "claim_control_file": "D:\\video_search_tool\\startup_render\\runtime\\lan_resident_v1\\CLAIM_CONTROL.json",
+  "media_execution_enabled": true,
+  "publisher_execution_node": "WORKER-2060S-01",
+  "server_provider_upload": "LEGACY_AVAILABLE"
+}

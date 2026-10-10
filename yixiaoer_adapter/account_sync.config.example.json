@@ -1,0 +1,13 @@
+{
+  "operations_db": "D:\\video_search_tool\\operations.db",
+  "cli_executable": "C:\\Users\\Administrator\\.local\\node_modules\\@yixiaoermail\\cli\\bin-native\\yxer.exe",
+  "cli_config": "C:\\Users\\Administrator\\.yxer\\config.json",
+  "ffprobe": "D:\\小V猫\\resources\\app\\ffprobe.exe",
+  "pythonw": "D:\\video_search_tool\\.venv-cuda-test\\Scripts\\pythonw.exe",
+  "worker_id": "YIXIAOER-ACCOUNT-SYNC-SERVER-01",
+  "worker_enabled": false,
+  "runtime_dir": "D:\\video_search_tool\\yixiaoer_adapter\\runtime\\account_sync_worker",
+  "sync_interval_seconds": 300,
+  "missing_limit": 3,
+  "missing_ttl_seconds": 900
+}

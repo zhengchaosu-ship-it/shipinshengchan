@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1",
+  "app_name": "小V猫",
+  "executable_path": "D:\\小V猫\\小V猫.exe",
+  "process_name": "小V猫.exe",
+  "main_window_title_re": "^小V猫$",
+  "user_data_dir": "",
+  "export_directories": [],
+  "observed_localhost_ports": [],
+  "operations_db": "development_link/verification/operations.db",
+  "results_dir": "development_link/verification/results",
+  "real_publish_enabled": false,
+  "retry_count": 1,
+  "max_batch_enqueue": 50,
+  "max_live_test_jobs": 1,
+  "selectors": {},
+  "selector_status": "DEVELOPMENT_ONLY_NO_LIVE_PUBLISH"
+}

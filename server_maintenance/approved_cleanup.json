@@ -1,0 +1,5 @@
+{
+  "policy": "EXPLICIT_FILES_ONLY_SHA256_SIZE_TTL_REQUIRED",
+  "files": [],
+  "notes": "V2清理权限有效；未知文件绝不因扩展名/目录名自动登记。已执行磁盘回收见disk_recovery/20261009_v1。"
+}

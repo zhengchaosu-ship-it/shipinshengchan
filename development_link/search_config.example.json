@@ -1,0 +1,7 @@
+{
+  "search_index": "july_test",
+  "candidate_dedup": true,
+  "text_search_enabled": true,
+  "speech_search_enabled": true,
+  "jianying_auto_enabled": true
+}

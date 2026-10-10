@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": "xiaomiaozhao",
+      "name": "小妙招",
+      "aliases": ["小妙招"],
+      "type": "教学课程",
+      "default_prior": "PRODUCT"
+    }
+  ]
+}

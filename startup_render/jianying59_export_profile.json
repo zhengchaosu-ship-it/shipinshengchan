@@ -1,0 +1,23 @@
+{
+  "version": "5.9.0.11632",
+  "dpi": 96,
+  "window_size": [
+    1280,
+    720
+  ],
+  "anchor_rect": [
+    1038,
+    7,
+    1092,
+    29
+  ],
+  "button_rect": [
+    1107,
+    7,
+    1161,
+    29
+  ],
+  "template": "jianying59_export_button.png",
+  "template_sha256": "488dd6e3c276537e6e93d0d8ecccd9e73f559be37c3822f0963cdd3a22c750ce",
+  "evidence": "editor.json: real 2060S 2026-10-06"
+}

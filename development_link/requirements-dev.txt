@@ -1,0 +1,6 @@
+# 自动发布模块/既有 mock UI 回归所需最小依赖，版本约束来自根 requirements.txt。
+streamlit
+numpy
+pillow
+faiss-cpu
+comtypes==1.4.17

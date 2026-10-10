@@ -1,0 +1,22 @@
+{
+  "worker_id": "YIXIAOER-PUBLISH-WORKER-SERVER-01",
+  "hostname": "PC-20260617GEOP",
+  "worker_enabled": false,
+  "execution_mode": "DRY_RUN",
+  "allowed_plan_ids": [],
+  "operations_db": "D:\\video_search_tool\\operations.db",
+  "runtime_dir": "D:\\video_search_tool\\yixiaoer_adapter\\runtime",
+  "canary_dir": "D:\\video_search_tool\\yixiaoer_adapter\\runtime\\canary",
+  "cli_executable": "C:\\Users\\Administrator\\.local\\node_modules\\@yixiaoermail\\cli\\bin-native\\yxer.exe",
+  "cli_config": "C:\\Users\\Administrator\\.yxer\\config.json",
+  "ffprobe": "D:\\小V猫\\resources\\app\\ffprobe.exe",
+  "ffmpeg": "D:\\video_search_tool\\bin\\ffmpeg.exe",
+  "font": "C:\\Windows\\Fonts\\msyh.ttc",
+  "client_executable": "D:\\文小二\\yixiaoer\\蚁小二4.0.exe",
+  "pythonw": "D:\\video_search_tool\\.venv-cuda-test\\Scripts\\pythonw.exe",
+  "test_business_account_id": "",
+  "test_provider_account_id": "",
+  "primary_provider": "yixiaoer",
+  "provider_execution_role": "CONTROL_PLANE",
+  "publisher_execution_node": "WORKER-2060S-01"
+}

@@ -1,0 +1,7 @@
+# 剪映自动合成脚本依赖（Windows）
+# 安装命令： pip install -r requirements.txt
+
+pyJianYingDraft>=0.3.0
+faster-whisper>=1.0.0
+pymediainfo>=6.0
+imageio-ffmpeg>=0.4.9

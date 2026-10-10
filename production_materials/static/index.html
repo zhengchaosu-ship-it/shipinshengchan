@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生产素材库 · 寻帧</title><link rel="stylesheet" href="./portal.css"><script src="./portal.js" defer></script></head>
+<body><main>
+  <header class="page-head"><div><p class="eyebrow">视频生成 / 素材准备</p><h1>生产素材库</h1><p class="muted">把剪好的内容交给素材库，下一次生成即可使用。</p></div><span class="local-status" id="connection">正在连接素材库</span></header>
+  <nav class="tabs" aria-label="素材库功能"><button data-page="upload" class="active" aria-current="page">上传素材</button><button data-page="overview">素材总览</button><button data-page="records">入库记录</button></nav>
+  <div id="notice" role="status" hidden></div>
+  <section id="upload" class="page">
+    <div class="intro-note"><span class="note-mark">!</span><div>这里只上传已经剪辑完成、可直接用于视频拼接的素材。<span>原始直播录屏请继续使用索引模块。</span></div></div>
+    <div class="section-label"><span>01</span><h2>上传哪类素材？</h2></div>
+    <div class="business-grid" role="group" aria-label="业务类型">
+      <button class="business active" data-business="STARTUP" aria-pressed="true"><span class="business-icon">↗</span><span><strong>起号素材</strong><small>引流 · 手法 · 坐诊 · 收尾</small></span><i class="selection-dot"></i></button>
+      <button class="business" data-business="COMMERCE" aria-pressed="false"><span class="business-icon">▦</span><span><strong>带货素材</strong><small>按产品与内容模块分类</small></span><i class="selection-dot"></i></button>
+      <button class="business" data-business="VISUAL" aria-pressed="false"><span class="business-icon">▧</span><span><strong>背景素材</strong><small>图片与视频 · 账号视觉</small></span><i class="selection-dot"></i></button>
+    </div>
+    <div class="classification"><div class="field"><label for="pool">素材分类</label><select id="pool"></select></div><div class="field" id="product-field" hidden><label for="product">产品</label><select id="product"></select></div><p id="classification-help" class="muted"></p></div>
+    <div id="pool-warning" class="warning" hidden>此分类尚未配置接收目录。请管理员在「高级管理 → 生产素材目录」设置后再上传。</div>
+    <div class="section-label"><span>02</span><h2>添加剪好的素材</h2><span class="section-end" id="file-support">支持多个视频</span></div>
+    <div class="dropzone" id="dropzone"><span class="upload-symbol" aria-hidden="true">↑</span><h3 id="drop-title">把剪好的素材拖到这里</h3><p>或 <button class="choose" id="choose">选择文件</button></p><p class="muted" id="type-hint">支持 MP4、MOV 等视频格式 · 单文件最大 50 GB</p><input id="files" type="file" multiple hidden></div>
+    <div class="resume-note" id="resume-note" hidden>有未完成的上传。重新选择原文件即可从已上传位置续传。</div>
+    <div id="file-list" class="file-list" aria-live="polite"></div>
+    <div class="upload-actions"><div><strong id="selection-summary">尚未选择文件</strong><p class="muted" id="selection-detail">分片上传，可暂停后继续</p></div><div class="action-buttons"><button id="clear" class="secondary" hidden>清空选择</button><button id="pause" class="secondary" hidden>暂停上传</button><button id="start" class="primary" disabled>开始入库 <span>→</span></button></div></div>
+    <div id="batch-summary" class="batch-summary" hidden aria-live="polite"></div>
+  </section>
+  <section id="overview" class="page" hidden><div class="section-bar"><div><h2>可用素材总览</h2><p class="muted">按分类查看库存，点击卡片预览素材。</p></div><div class="field"><label for="overview-product">带货产品</label><select id="overview-product"></select></div></div><div id="pool-cards"></div><div class="section-bar library-head"><h2 id="library-title">素材</h2><button id="refresh-library" class="secondary">刷新素材</button></div><div id="material-grid" class="material-grid"></div><div class="pagination"><button id="previous-materials" class="secondary">上一页</button><span id="material-page" class="muted"></span><button id="next-materials" class="secondary">下一页</button></div></section>
+  <section id="records" class="page" hidden><div class="section-bar"><div><h2>最近入库</h2><p class="muted">最近 200 条文件记录 · 校验结果自动更新</p></div><button id="refresh-records" class="secondary">刷新记录</button></div><div id="recent-summary" class="batch-summary"></div><div class="table-wrap"><table><thead><tr><th>时间</th><th>业务</th><th>产品</th><th>分类</th><th>文件名</th><th>状态</th></tr></thead><tbody id="record-rows"></tbody></table></div><div id="record-empty" class="empty" hidden>还没有上传记录。第一批素材可以从「上传素材」开始。</div></section>
+  <footer>寻帧 · 本地生产素材库 <span>文件保存在工作室服务器</span></footer>
+</main><dialog id="preview"><div class="dialog-head"><h2 id="preview-title">素材预览</h2><button id="close-preview" class="secondary" aria-label="关闭预览">关闭 ×</button></div><div id="preview-media"></div><dl id="preview-info"></dl></dialog>
+</body></html>
